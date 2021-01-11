@@ -4,10 +4,9 @@ extern crate proc_macro;
 
 use darling::*;
 use proc_macro::TokenStream;
-use proc_macro2::{TokenStream as SynTokenStream, Literal};
+use proc_macro2::{TokenStream as SynTokenStream, Literal, Span};
 use std::collections::HashSet;
 use syn::{*, Result, Error};
-use syn::export::Span;
 use syn::spanned::Spanned;
 use quote::*;
 
@@ -239,7 +238,7 @@ fn enum_set_type_impl(info: EnumSetInfo) -> SynTokenStream {
     let name = &info.name;
     let enumset = match &info.crate_name {
         Some(crate_name) => quote!(::#crate_name),
-        None => quote!(::enumset),
+        None => quote!(::wasmer_enumset),
     };
     let typed_enumset = quote!(#enumset::EnumSet<#name>);
     let core = quote!(#enumset::__internal::core_export);

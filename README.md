@@ -5,6 +5,8 @@
 ![Requires rustc 1.31+](https://img.shields.io/badge/rustc-1.31+-red.svg)
 [![Rust Documentation](https://img.shields.io/badge/api-rustdoc-blue.svg)](https://docs.rs/enumset)
 
+This is a fork of https://github.com/Lymia/enumset and will not be updated once the fix for the breaking `syn` issue is resolved.
+
 A library for defining enums that can be used in compact bit sets.
 It supports enums up to 128 variants, and has a macro to use these sets in constants.
 

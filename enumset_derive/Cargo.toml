@@ -1,15 +1,17 @@
 [package]
-name = "enumset_derive"
+name = "wasmer_enumset_derive"
 version = "0.5.0"
-authors = ["Alissa Rao <lymia@lymiahugs.com>"]
+authors = ["Wasmer Engineering Team <engineering@wasmer.io>"]
 edition = "2018"
 
-description = "An internal helper crate for enumset. Not public API."
+description = "An internal helper crate for enumset. Not public API. Wasmer fork to work around `syn` issue. This will not be updated once the issue is fixed upstream."
 
-documentation = "https://lymia.moe/doc/enumset/enumset/"
-repository = "https://github.com/Lymia/enumset"
+repository = "https://github.com/wasmerio/enumset"
 
 license = "MIT/Apache-2.0"
+
+[badges]
+maintenance = { status = "deprecated" }
 
 [lib]
 proc-macro = true

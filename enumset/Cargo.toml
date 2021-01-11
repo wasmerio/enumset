@@ -1,28 +1,28 @@
 [package]
-name = "enumset"
+name = "wasmer_enumset"
 version = "1.0.1"
-authors = ["Alissa Rao <lymia@lymiahugs.com>"]
+authors = ["Wasmer Engineering Team <engineering@wasmer.io>"]
 edition = "2018"
 
-description = "A library for creating compact sets of enums."
+description = "A library for creating compact sets of enums. Wasmer fork to work around `syn` issue. This will not be updated once the issue is fixed upstream."
 keywords = ["enum", "bitset"]
 categories = ["data-structures"]
 
 documentation = "https://docs.rs/enumset/"
-repository = "https://github.com/Lymia/enumset"
+repository = "https://github.com/wasmerio/enumset"
+
 readme = "../README.md"
 
 license = "MIT/Apache-2.0"
 
 [badges]
-travis-ci = { repository = "Lymia/enumset", branch = "master" }
-maintenance = { status = "actively-developed" }
+maintenance = { status = "deprecated" }
 
 [features]
-serde = ["serde2", "enumset_derive/serde"]
+serde = ["serde2", "wasmer_enumset_derive/serde"]
 
 [dependencies]
-enumset_derive = { version = "0.5.0", path = "../enumset_derive" }
+wasmer_enumset_derive = { version = "0.5.0", path = "../enumset_derive" }
 num-traits = { version = "0.2", default-features = false }
 serde2 = { package = "serde", version = "1.0.91", default-features = false, optional = true }
 

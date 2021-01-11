@@ -75,7 +75,7 @@
 //! assert_eq!(set, Enum::A | Enum::E | Enum::G);
 //! ```
 
-pub use enumset_derive::*;
+pub use wasmer_enumset_derive::*;
 
 use core::cmp::Ordering;
 use core::fmt;
